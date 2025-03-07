@@ -1,0 +1,6 @@
+@SendEmailTemplates_HostAddress = http://localhost:5118
+
+GET {{SendEmailTemplates_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
