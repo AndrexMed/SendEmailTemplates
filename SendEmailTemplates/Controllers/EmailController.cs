@@ -10,9 +10,9 @@ namespace SendEmailTemplates.Controllers
         private readonly IEmailService _emailService = emailService;
 
         [HttpPost]
-        public async Task<IActionResult> SendEmail(string to, string subject, string body)
+        public async Task<IActionResult> SendEmail(string to, string subject, IFormFile htmlTemplate)
         {
-            await _emailService.SendEmailAsync(to, subject, body);
+            await _emailService.SendEmailAsync(to, subject, htmlTemplate);
             return Ok();
         }
     }
